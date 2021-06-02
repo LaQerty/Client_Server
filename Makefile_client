@@ -1,0 +1,15 @@
+cc=gcc
+flags= -W -Wall -Werror
+
+all: client lab 
+
+client: 
+	$(cc) $(flags) client.c -o client -lpthread 
+
+lab:
+	./client
+
+clean:
+	rm -rf *.o lab
+
+

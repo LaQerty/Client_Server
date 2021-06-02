@@ -1,0 +1,14 @@
+cc=gcc
+flags= -W -Wall -Werror
+
+all: server lab 
+	
+server:
+	$(cc) $(flags) server.c -o server
+
+lab:
+	./server
+
+clean:
+	rm -rf *.o lab
+
